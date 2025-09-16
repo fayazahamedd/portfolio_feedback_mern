@@ -43,25 +43,4 @@ export default defineConfig({
       "@mui/icons-material",
     ],
   },
-
-  build: {
-    // Disable source maps for production build
-    sourcemap: false,
-    // Set the target environment to ECMAScript 2018
-    target: "es2018",
-    // Disable Brotli size display in the build summary
-    brotliSize: false,
-    // Set the warning limit for chunk sizes during build
-    chunkSizeWarningLimit: 2000,
-    rollupOptions: {
-      output: {
-        // Define MIME types for JavaScript files with 'js' and 'jsx' extensions
-        mimeTypes: {
-          "application/javascript": ["js", "jsx"],
-        },
-        // Set the script type to 'module'
-        scriptType: "module",
-      },
-    },
-  },
 });
