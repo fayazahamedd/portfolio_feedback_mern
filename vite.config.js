@@ -2,8 +2,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import path from 'path';
+
 // Define paths for easier imports
 const pathResolve = dir => path.resolve(__dirname, dir);
+
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -16,6 +18,15 @@ export default defineConfig({
   server: {
     port: 3210,
     open: true, // Open the default browser when the server starts
+  },
+
+  optimizeDeps: {
+    include: [
+      '@mui/material',
+      '@mui/x-date-pickers',
+      '@mui/lab',
+      '@mui/icons-material',
+    ],
   },
 
   build: {
