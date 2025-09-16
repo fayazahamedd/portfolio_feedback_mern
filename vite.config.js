@@ -15,7 +15,7 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: "build",
+    outDir: "build", // change from default 'dist' to 'build'
     sourcemap: false,
     target: "es2018",
     brotliSize: false,
@@ -29,6 +29,7 @@ export default defineConfig({
       },
     },
   },
+
   server: {
     port: 3210,
     open: true, // Open the default browser when the server starts
